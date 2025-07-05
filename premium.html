@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premium Chatbots</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-900 text-white font-sans min-h-screen p-6">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Access - Reynald Intelligence</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7ff;
+      color: #333;
+    }
+    h1 {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .chatbot-container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .chatbot-box {
+      margin-bottom: 40px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: white;
+    }
+    .chatbot-title {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #e0e7ff;
+      padding: 15px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+  </style>
+  <script>
+    // Password protection
+    const pw = prompt("Masukkan password untuk akses premium:");
+    if (pw !== "renal49") {
+      alert("Password salah! Akses ditolak.");
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body>
 
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-6 text-yellow-400">👑 Chatbot Premium</h1>
-      <p class="text-lg text-gray-300 mb-10">Halaman ini akan menampilkan chatbot premium berisi materi AI lanjutan & eksklusif. Stay tuned!</p>
+  <h1>🎓 Premium AI Chatbot Access</h1>
 
-      <a href="index.html" class="inline-block bg-blue-500 px-6 py-3 rounded-lg text-white font-semibold hover:bg-blue-600 transition">
-        ← Kembali ke Beranda
-      </a>
+  <div class="chatbot-container">
+
+    <div class="chatbot-box">
+      <div class="chatbot-title">1. Dasar Machine Learning</div>
+      <iframe src="https://huggingface.co/spaces/reynaldintelligence/MACHINE_LEARNING"></iframe>
     </div>
 
-  </body>
+    <div class="chatbot-box">
+      <div class="chatbot-title">2. Dasar Deep Learning</div>
+      <iframe src="https://huggingface.co/spaces/reynaldintelligence/DEEP_LEARNING"></iframe>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title">3. Algoritma AI Dasar</div>
+      <iframe src="https://huggingface.co/spaces/reynaldintelligence/ALGORITMA_AI_DASAR"></iframe>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title">4. Dataset & Data Science</div>
+      <iframe src="https://huggingface.co/spaces/reynaldintelligence/DATASET_DAN_DATA_SCIENCE"></iframe>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title">5. Natural Language Processing (NLP)</div>
+      <iframe src="https://huggingface.co/spaces/reynaldintelligence/NLP"></iframe>
+    </div>
+
+  </div>
+</body>
 </html>
