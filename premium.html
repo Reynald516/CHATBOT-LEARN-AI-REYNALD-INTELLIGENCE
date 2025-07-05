@@ -4,50 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Premium Access - Reynald Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f9;
       margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1e40af;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1e3a8a, #6d28d9);
       color: white;
+    }
+
+    header {
+      padding: 30px 20px;
       text-align: center;
-      padding: 20px;
-      font-size: 28px;
-      font-weight: bold;
+      background-color: rgba(0,0,0,0.15);
+      font-size: 32px;
+      font-weight: 800;
     }
+
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
     }
+
     .chatbot-box {
       background-color: white;
-      padding: 20px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #111827;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .chatbot-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+    }
+
     .chatbot-title {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 10px;
     }
+
+    .chatbot-desc {
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
     .chatbot-button {
-      padding: 12px 24px;
+      padding: 10px 24px;
       font-size: 16px;
       border: none;
-      background-color: #2563eb;
+      background: linear-gradient(to right, #2563eb, #7c3aed);
       color: white;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: opacity 0.3s ease;
     }
+
     .chatbot-button:hover {
-      background-color: #1d4ed8;
+      opacity: 0.85;
+    }
+
+    .icon {
+      font-size: 22px;
+    }
+
+    @media (max-width: 600px) {
+      .chatbot-title {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
   <script>
@@ -60,46 +93,50 @@
 </head>
 <body>
 
-<header>🎓 Premium AI Chatbot Access</header>
+  <header>🎓 Premium AI Chatbot Access</header>
 
-<div class="container">
+  <div class="container">
 
-  <div class="chatbot-box">
-    <div class="chatbot-title">1. Dasar Machine Learning</div>
-    <a href="https://huggingface.co/spaces/reynaldintelligence/MACHINE_LEARNING" target="_blank">
-      <button class="chatbot-button">Buka Chatbot</button>
-    </a>
+    <div class="chatbot-box">
+      <div class="chatbot-title"><span class="icon">🤖</span> Dasar Machine Learning</div>
+      <div class="chatbot-desc">Mulai dari algoritma dan struktur dasar ML yang wajib dipahami.</div>
+      <a href="https://huggingface.co/spaces/reynaldintelligence/MACHINE_LEARNING" target="_blank">
+        <button class="chatbot-button">Buka Chatbot</button>
+      </a>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title"><span class="icon">⚡</span> Dasar Deep Learning</div>
+      <div class="chatbot-desc">Pelajari konsep neural network dan deep learning modern.</div>
+      <a href="https://huggingface.co/spaces/reynaldintelligence/DEEP_LEARNING" target="_blank">
+        <button class="chatbot-button">Buka Chatbot</button>
+      </a>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title"><span class="icon">📘</span> Algoritma AI Dasar</div>
+      <div class="chatbot-desc">Pelajari algoritma klasik AI dan cara kerjanya secara teknis.</div>
+      <a href="https://huggingface.co/spaces/reynaldintelligence/ALGORITMA_AI_DASAR" target="_blank">
+        <button class="chatbot-button">Buka Chatbot</button>
+      </a>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title"><span class="icon">📊</span> Dataset & Data Science</div>
+      <div class="chatbot-desc">Belajar data preprocessing, eksplorasi data, dan dasar statistik.</div>
+      <a href="https://huggingface.co/spaces/reynaldintelligence/DATASET_DAN_DATA_SCIENCE" target="_blank">
+        <button class="chatbot-button">Buka Chatbot</button>
+      </a>
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chatbot-title"><span class="icon">🧠</span> Natural Language Processing</div>
+      <div class="chatbot-desc">Pahami bagaimana AI memproses bahasa manusia dengan NLP.</div>
+      <a href="https://huggingface.co/spaces/reynaldintelligence/NLP" target="_blank">
+        <button class="chatbot-button">Buka Chatbot</button>
+      </a>
+    </div>
+
   </div>
-
-  <div class="chatbot-box">
-    <div class="chatbot-title">2. Dasar Deep Learning</div>
-    <a href="https://huggingface.co/spaces/reynaldintelligence/DEEP_LEARNING" target="_blank">
-      <button class="chatbot-button">Buka Chatbot</button>
-    </a>
-  </div>
-
-  <div class="chatbot-box">
-    <div class="chatbot-title">3. Algoritma AI Dasar</div>
-    <a href="https://huggingface.co/spaces/reynaldintelligence/ALGORITMA_AI_DASAR" target="_blank">
-      <button class="chatbot-button">Buka Chatbot</button>
-    </a>
-  </div>
-
-  <div class="chatbot-box">
-    <div class="chatbot-title">4. Dataset & Data Science</div>
-    <a href="https://huggingface.co/spaces/reynaldintelligence/DATASET_DAN_DATA_SCIENCE" target="_blank">
-      <button class="chatbot-button">Buka Chatbot</button>
-    </a>
-  </div>
-
-  <div class="chatbot-box">
-    <div class="chatbot-title">5. Natural Language Processing (NLP)</div>
-    <a href="https://huggingface.co/spaces/reynaldintelligence/NLP" target="_blank">
-      <button class="chatbot-button">Buka Chatbot</button>
-    </a>
-  </div>
-
-</div>
-
 </body>
 </html>
